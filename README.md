@@ -5,7 +5,8 @@
 A simple Docker image for running your own [LanguageTool](https://languagetool.org/) server.
 
 ### Option A - Use DockerHub image based off this repo
-                                                                                                                                                            ```
+
+```
 docker run --rm -p 8081 curtiskneisel/languagetool-server:latest
 ```
 
