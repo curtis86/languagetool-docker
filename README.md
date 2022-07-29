@@ -1,9 +1,15 @@
+[![BuildBadge](https://github.com/curtis86/languagetool-docker/actions/workflows/main.yml/badge.svg)](https://github.com/curtis86/languagetool-docker/actions/workflows/main.yml/badge.svg)
+
 # languagetool-docker
 
 A simple Docker image for running your own [LanguageTool](https://languagetool.org/) server.
 
+### Option A - Use DockerHub image based off this repo
+                                                                                                                                                            ```
+docker run --rm -p 8081 curtiskneisel/languagetool-server:latest
+```
 
-### Option A - Build your own docker image
+### Option B - Build your own docker image
 
 1. Clone this repo and change into the directory
 
@@ -23,10 +29,6 @@ docker build -t languagetool-server .
 ```
 docker run --rm -p 8081:8081 languagetool-server
 ```
-
-### Option B - Use DockerHub image based off this repo
-
-TBC.
 
 ### Run with docker-compose
 
