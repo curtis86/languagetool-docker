@@ -1,0 +1,7 @@
+version: "3.9"
+   
+services:
+  languagetool-server:
+    image: languagetool
+    ports:
+      - "8081:8081"
