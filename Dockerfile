@@ -7,7 +7,8 @@ ARG LT_USER="languagetool"
 # Install languagetool
 WORKDIR /opt
 RUN wget -q https://languagetool.org/download/LanguageTool-stable.zip -O /opt/languagetool.zip
-RUN unzip languagetool.zip
+RUN unzip -q languagetool.zip
+RUN rm -rf /opt/languagetool.zip
 RUN adduser --disabled-password $LT_USER
 RUN chown -R $LT_USER:$LT_USER /opt/LanguageTool-$LT_VERSION
 
