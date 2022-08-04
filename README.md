@@ -33,15 +33,17 @@ docker run --rm -p 8081:8081 languagetool-server
 
 ### Run with docker-compose
 
-1. Start the languagetool-server service. Modify the `docker-compose.yaml` file to suit your environment (ie. change port number, etc).
+1. Create a `languagetool-docker` directory, clone the `docker-compose.yaml` file and then start it up!
 
 ```
+mkdir languagetool-docker && cd languagetool-docker
+wget https://raw.githubusercontent.com/curtis86/languagetool-docker/main/docker-compose.yaml
 docker-compose up -d
 ```
 
 #### Test Query
 
-You can test your instance of LanguageTool server once it's running with the following command (note - using `jq` to print JSON nicely):
+You can test your instance of LanguageTool server once it's running with the following command (note - using `jq` to print JSON nicely). We'll use an obvious typo to test:
 
 ```
 curl -d "language=en-US" -d "text=A simple tset" http://localhost:8081/v2/check | jq .

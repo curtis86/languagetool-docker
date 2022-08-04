@@ -2,6 +2,6 @@ version: "3.9"
    
 services:
   languagetool-server:
-    image: languagetool
+    image: curtiskneisel/languagetool-server
     ports:
       - "8081:8081"
